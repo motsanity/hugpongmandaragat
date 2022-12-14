@@ -1,0 +1,12 @@
+[25-Oct-2022 22:00:08 Asia/Manila] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/hugpongm/public_html/system/database.php on line 7
+[25-Oct-2022 22:00:08 Asia/Manila] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/hugpongm/public_html/system/database.php:7) in /home2/hugpongm/public_html/system/general.php on line 10
+[26-Oct-2022 02:10:39 Asia/Manila] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/hugpongm/public_html/system/database.php on line 7
+[26-Oct-2022 02:10:39 Asia/Manila] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/hugpongm/public_html/system/database.php:7) in /home2/hugpongm/public_html/system/general.php on line 10
+[26-Oct-2022 02:11:57 Asia/Manila] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/hugpongm/public_html/system/database.php on line 7
+[26-Oct-2022 02:11:57 Asia/Manila] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/hugpongm/public_html/system/database.php:7) in /home2/hugpongm/public_html/system/general.php on line 10
+[13-Dec-2022 10:46:28 Asia/Manila] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/hugpongm/public_html/system/database.php on line 7
+[13-Dec-2022 10:46:28 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on bool in /home2/hugpongm/public_html/system/users_pagination.php:13
+Stack trace:
+#0 /home2/hugpongm/public_html/system/users.php(70): include()
+#1 {main}
+  thrown in /home2/hugpongm/public_html/system/users_pagination.php on line 13

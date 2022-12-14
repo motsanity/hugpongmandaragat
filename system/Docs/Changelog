@@ -1,0 +1,8 @@
+April 12 2020
+- Imported SQL file
+- Changed definitions of users table
+- Created "dashboard.js"
+- Created "dashboard.php"
+- Created "database.php"
+- Created "index.php"
+- Navbar in index.php changed with nabber in components folder

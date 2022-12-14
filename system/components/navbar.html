@@ -1,0 +1,357 @@
+ <!-- HEADER MOBILE-->
+ <?php
+ 	include("account.php");
+ ?>
+<style>
+	.account-wrap .image {
+		object-fit: ;
+	}
+</style>
+<header class="header-mobile d-block d-lg-none">
+
+
+<div class="header-mobile__bar">
+    <div class="container-fluid">
+        <div class="header-mobile-inner">
+		    <a href="#">
+		        <i class="icon fa fa-anchor align-middle"></i>
+				<span class="align-middle">HUGPONG MANDARAGAT</span>
+		    </a>
+            <button class="hamburger hamburger--slider" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar-mobile">
+    <div class="container-fluid">
+        <ul class="navbar-mobile__list list-unstyled">
+            <li>
+				<a href="index.php">
+					<i class="fas fa-tachometer-alt"></i>Dashboard
+				</a>
+			</li>
+			<?php if ($_SESSION['privilege'] == 3):?>
+            <li>
+                <a href="chart.php">
+                    <i class="fas fa-chart-bar"></i>Financial Reports
+				</a>
+            </li>
+			<?php endif?>
+			
+			<?php if ($_SESSION['privilege'] != 2):?>
+			<li class="has-sub">
+                <a class="js-arrow" href="#">
+                    <i class="zmdi zmdi-assignment-account"></i>Management
+					<span class="arrow float-right">
+						<i class="fas fa-angle-down"></i>
+					</span>
+				</a>
+					<ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+						<?php
+							if ($_SESSION["privilege"] == 3) {
+						?>
+						<li>
+							<a href="user_log.php">
+								<i class="zmdi zmdi-settings"></i>User Logs
+							</a>
+						</li>
+						<?php } ?>
+
+						<li>
+							<a href="user_log.php">
+								<i class="zmdi zmdi-settings"></i>User Logs
+							</a>
+						</li>
+
+						<li>
+							<a href="users.php">
+								<i class="zmdi zmdi-accounts"></i>User List
+							</a>
+						</li>
+						<?php if ($_SESSION['privilege'] == 3):?>
+						<li>
+							<a href="encoder_form.php">
+								<i class="zmdi zmdi-account-add"></i>Register Encoder
+							</a>
+						</li>
+						<?php endif?>
+						<li>
+							<a href="form.php">
+								<i class="zmdi zmdi-account-add"></i>Register Member
+							</a>
+						</li>
+						
+						<li>
+							<a href="update_profile.php">
+								<i class="zmdi zmdi-edit"></i>Update User Profile
+							</a>
+						</li>
+						
+						<li>
+							<a href="update_files.php">
+								<i class="zmdi zmdi-upload"></i>Update Documents
+							</a>
+						</li>
+						<li>
+							<a href="update_claim_classification.php">
+								<i class="zmdi zmdi-edit"></i>Update Claim Classification
+							</a>
+						</li>
+						<li>
+							<a href="update_fees.php">
+								<i class="zmdi zmdi-edit"></i>Update Fees
+							</a>
+						</li>
+					</ul>
+					
+			</li>
+
+			<li>
+                <a href="donate_form.php">
+                    <i class="zmdi zmdi-money"></i>Donation Form
+				</a>
+            </li>
+			
+			<li>
+                <a href="withdrawal_form.php">
+                   <i class="zmdi zmdi-money-off"></i>Withdrawal Form
+				</a>
+            </li>
+			
+			<li>
+                <a href="claim_form.php">
+                    <i class="zmdi zmdi-money-box"></i>Claim Form
+				</a>
+            </li>
+			<?php endif?>
+			
+			<?php if ($_SESSION['privilege'] == 2):?>
+			<li class="has-sub">
+                <a class="js-arrow" href="#">
+                    <i class="zmdi zmdi-assignment-account"></i>Management
+					<span class="arrow float-right">
+						<i class="fas fa-angle-down"></i>
+					</span>
+				</a>
+					<ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+						<li>
+							<a href="update_profile.php">
+								<i class="zmdi zmdi-edit"></i>Update User Profile
+							</a>
+						</li>
+					</ul>
+            </li>
+			<?php endif?>
+        </ul>
+    </div>
+</nav>
+</header>
+<!-- END HEADER MOBILE-->
+
+<!-- MENU SIDEBAR-->
+<aside class="menu-sidebar d-none d-lg-block">
+<div class="logo">
+    <a href="#">
+        <i class="icon fa fa-anchor align-middle"></i>
+		<span class="align-middle">HUGPONG MANDARAGAT</span>
+    </a>
+</div>
+
+<div class="menu-sidebar__content js-scrollbar1">
+    <nav class="navbar-sidebar m-b-30">
+        <ul class="list-unstyled navbar__list">
+            <li>
+				<a href="index.php">
+					<i class="fas fa-tachometer-alt"></i>Dashboard
+				</a>
+			</li>
+			<?php if ($_SESSION['privilege'] == 3):?>
+            <li>
+                <a href="chart.php">
+                    <i class="fas fa-chart-bar"></i>Financial Reports
+				</a>
+            </li>
+			<?php endif?>
+			
+			<?php if ($_SESSION['privilege'] != 2):?>
+			<li class="has-sub">
+                <a class="js-arrow" href="#">
+                    <i class="zmdi zmdi-assignment-account"></i>Management
+					<span class="arrow float-right">
+						<i class="fas fa-angle-down"></i>
+					</span>
+				</a>
+					<ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+						
+						<li>
+							<a href="user_log.php">
+								<i class="zmdi zmdi-settings"></i>User Logs
+							</a>
+						</li>
+						
+						<li>
+							<a href="users.php">
+								<i class="zmdi zmdi-accounts"></i>User List
+							</a>
+						</li>
+						<?php if ($_SESSION['privilege'] == 3):?>
+						<li>
+							<a href="encoder_form.php">
+								<i class="zmdi zmdi-account-add"></i>Register Encoder
+							</a>
+						</li>
+						<?php endif?>
+						<li>
+							<a href="form.php">
+								<i class="zmdi zmdi-account-add"></i>Register Member
+							</a>
+						</li>
+						
+						<li>
+							<a href="update_profile.php">
+								<i class="zmdi zmdi-edit"></i>Update User Profile
+							</a>
+						</li>
+						
+						<li>
+							<a href="update_files.php">
+								<i class="zmdi zmdi-upload"></i>Update Documents
+							</a>
+						</li>
+						
+						<li>
+							<a href="update_claim_classification.php">
+								<i class="zmdi zmdi-edit"></i>Update Claim Classification
+							</a>
+						</li>
+						
+						<li>
+							<a href="update_fees.php">
+								<i class="zmdi zmdi-edit"></i>Update Fees
+							</a>
+						</li>
+					</ul>
+			</li>
+
+			<li>
+                <a href="donate_form.php">
+                    <i class="zmdi zmdi-money"></i>Donation Form
+				</a>
+            </li>
+			
+			<li>
+                <a href="withdrawal_form.php">
+                   <i class="zmdi zmdi-money-off"></i>Withdrawal Form
+				</a>
+            </li>
+			
+			<li>
+                <a href="claim_form.php">
+                    <i class="zmdi zmdi-money-box"></i>Claim Form
+				</a>
+            </li>
+			<?php endif?>
+			
+			<?php if ($_SESSION['privilege'] == 2):?>
+			<li class="has-sub">
+                <a class="js-arrow" href="#">
+                    <i class="zmdi zmdi-assignment-account"></i>Management
+					<span class="arrow float-right">
+						<i class="fas fa-angle-down"></i>
+					</span>
+				</a>
+					<ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+						<li>
+							<a href="update_profile.php">
+								<i class="zmdi zmdi-edit"></i>Update User Profile
+							</a>
+						</li>
+					</ul>
+			</li>		
+			<?php endif?>
+        </ul>
+    </nav>
+</div>
+
+
+</aside>
+<!-- END MENU SIDEBAR-->
+
+<!-- PAGE CONTAINER-->
+<div class="page-container">
+<!-- HEADER DESKTOP-->
+<header class="header-desktop">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="header-wrap">
+                <form class="form-header" action="data.php" method="GET">
+				<?php if($_SESSION['privilege']!= 2):?>
+                    <input class="au-input au-input--xl" type="text" name="view" value="" placeholder="Search members" required/>
+                    <button class="au-btn--submit" type="submit">
+                        <i class="zmdi zmdi-search"></i>
+                    </button>
+				<?php endif?>	
+                </form>
+                <div class="header-button">
+                    <div class="noti-wrap">
+					
+					</div>
+                    
+                    <div class="account-wrap">
+                        <div class="account-item clearfix js-item-menu">
+                            <div class="image">
+								<?php if (file_exists($row_account['img_path']) && is_file($row_account["img_path"])) { ?>
+                                <img src="<?php echo $row_account['img_path']; ?>" alt="<?php echo $row_account['user_name']; ?>" />
+								<?php }
+								else { ?>
+                                <img src="assets/avatar.png" alt="<?php echo $row_account["user_name"]; ?>" />
+								<?php }?>
+                            </div>
+                            <div class="content">
+                                <a class="js-acc-btn" href="#"><?php echo $row_account["user_name"]?></a>
+                            </div>
+                            <div class="account-dropdown js-dropdown">
+                                <div class="info clearfix">
+                                    <div class="image">
+										<?php if (file_exists($row_account['img_path']) && is_file($row_account["img_path"])) { ?>
+                                        <a href="#">
+                                            <img src="<?php echo $row_account["img_path"]; ?>" alt=<?php echo $row_account["user_name"]?> />
+                                        </a>
+										<?php }
+										 else {?>
+                                        <a href="#">
+                                            <img src="assets/avatar.png" alt=<?php echo $row_account["user_name"]?> />
+                                        </a>
+										<?php } ?>
+                                    </div>
+                                    <div class="content">
+                                        <h5 class="name">
+                                            <a href="#"><?php echo $row_account["first_name"] . " " . $row_account["last_name"]?></a>
+                                        </h5>
+                                        <span class="email"><?php echo $row_account["email"]?></span>
+                                    </div>
+                                </div>
+								<?php if ($_SESSION['privilege'] == 2):?>
+                                <div class="account-dropdown__body">
+                                    <div class="account-dropdown__item">
+                                        <a href="profile.php">
+                                            <i class="zmdi zmdi-account"></i>Profile</a>
+                                    </div>
+                                </div>
+								<?php endif?>
+                                <div class="account-dropdown__footer">
+                                    <a href="components/logout.php?id=<?php echo $_SESSION["id"]; ?>">
+                                        <i class="zmdi zmdi-power"></i>Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
